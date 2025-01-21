@@ -4,10 +4,10 @@ end
 vim.g.loaded_notify_bug = true
 
 vim.api.nvim_create_augroup("notify_bug", { clear = true })
--- NOTE: VimEnter is included for easier demonstration of the problem, since it
+-- NOTE: BufEnter is included for easier demonstration of the problem, since it
 -- triggers a notification without any user interaction. It's otherwise
 -- irrelevant to the issue at hand
-vim.api.nvim_create_autocmd({ "VimEnter", "WinClosed" }, {
+vim.api.nvim_create_autocmd({ "BufEnter", "WinClosed" }, {
 	desc = "Test vim.notify",
 	pattern = { "*" },
 	callback = function()
